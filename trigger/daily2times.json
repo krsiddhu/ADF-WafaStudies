@@ -1,0 +1,25 @@
+{
+	"name": "daily2times",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "copyFileWithinStorageAccount",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Hour",
+				"interval": 12,
+				"startTime": "2022-01-18T15:39:00",
+				"endTime": "2022-01-19T15:39:00",
+				"timeZone": "India Standard Time"
+			}
+		}
+	}
+}
