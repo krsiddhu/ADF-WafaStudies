@@ -1,0 +1,16 @@
+{
+	"name": "ds_stwafastudies_cwafastudies_out",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_stwafastudies",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation"
+			}
+		}
+	}
+}

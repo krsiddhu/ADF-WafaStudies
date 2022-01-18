@@ -1,0 +1,19 @@
+{
+	"name": "ds_wafastudies_cwafastudies_in",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_stwafastudies",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "customer.txt",
+				"folderPath": "input",
+				"container": "ctwafastudies"
+			}
+		}
+	}
+}
