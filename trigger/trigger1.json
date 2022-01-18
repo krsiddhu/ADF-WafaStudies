@@ -1,0 +1,19 @@
+{
+	"name": "trigger1",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/ctwafastudies/blobs/input",
+			"blobPathEndsWith": ".txt",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/ee277ae4-2486-4022-85a0-bdd7c0e127cf/resourceGroups/rg-wafastudies-adf/providers/Microsoft.Storage/storageAccounts/stwafastudiestest",
+			"events": [
+				"Microsoft.Storage.BlobCreated",
+				"Microsoft.Storage.BlobDeleted"
+			]
+		}
+	}
+}
