@@ -30,30 +30,6 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/ds_wafastudies_cwafastudies_in')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "ls_stwafastudies",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "Binary",
-				"typeProperties": {
-					"location": {
-						"type": "AzureBlobStorageLocation",
-						"fileName": "customer.txt",
-						"folderPath": "input",
-						"container": "ctwafastudies"
-					}
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/ls_stwafastudies')]"
-			]
-		},
-		{
 			"name": "[concat(parameters('factoryName'), '/ds_stwafastudies_cwafastudies_out')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
@@ -69,6 +45,30 @@
 						"type": "AzureBlobStorageLocation",
 						"fileName": "people.txt",
 						"folderPath": "output",
+						"container": "ctwafastudies"
+					}
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/ls_stwafastudies')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/ds_wafastudies_cwafastudies_in')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "ls_stwafastudies",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "Binary",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobStorageLocation",
+						"fileName": "customer.txt",
+						"folderPath": "input",
 						"container": "ctwafastudies"
 					}
 				}
@@ -142,7 +142,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/daily2times')]",
+			"name": "[concat(parameters('factoryName'), '/hourly')]",
 			"type": "Microsoft.DataFactory/factories/triggers",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -162,7 +162,7 @@
 					"recurrence": {
 						"frequency": "Hour",
 						"interval": 12,
-						"startTime": "2022-01-18T15:39:00",
+						"startTime": "2022-01-18T00:39:00",
 						"endTime": "2022-01-19T15:39:00",
 						"timeZone": "India Standard Time"
 					}
