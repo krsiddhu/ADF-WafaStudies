@@ -1,0 +1,9 @@
+{
+	"name": "adf-wafapractice",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "00fd5675-b2b6-4aae-8a2e-4ae09c7ff98e",
+		"tenantId": "5b973f99-77df-4beb-b27d-aa0c70b8482c"
+	}
+}
