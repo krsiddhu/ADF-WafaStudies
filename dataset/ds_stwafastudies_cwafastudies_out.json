@@ -9,7 +9,10 @@
 		"type": "Binary",
 		"typeProperties": {
 			"location": {
-				"type": "AzureBlobStorageLocation"
+				"type": "AzureBlobStorageLocation",
+				"fileName": "people.txt",
+				"folderPath": "output",
+				"container": "ctwafastudies"
 			}
 		}
 	}
