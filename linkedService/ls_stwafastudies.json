@@ -1,0 +1,12 @@
+{
+	"name": "ls_stwafastudies",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobStorage",
+		"typeProperties": {
+			"connectionString": "DefaultEndpointsProtocol=https;AccountName=stwafastudiestest;EndpointSuffix=core.windows.net;",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDQ5RkM1RjgxLTMzMEYtNEY2OS04QUFDLTM3MTAzNjZDMDZCQV8yNDliZTVlNC0wYmJmLTQ0MTgtOWIyZC1jNWUzNjA5M2U2NzUiDQp9"
+		}
+	}
+}
