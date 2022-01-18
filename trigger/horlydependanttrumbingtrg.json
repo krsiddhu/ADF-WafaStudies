@@ -2,7 +2,7 @@
 	"name": "horlydependanttrumbingtrg",
 	"properties": {
 		"annotations": [],
-		"runtimeState": "Stopped",
+		"runtimeState": "Started",
 		"type": "TumblingWindowTrigger",
 		"typeProperties": {
 			"frequency": "Hour",
@@ -14,7 +14,19 @@
 			"retryPolicy": {
 				"intervalInSeconds": 30
 			},
-			"dependsOn": []
+			"dependsOn": [
+				{
+					"type": "TumblingWindowTriggerDependencyReference",
+					"referenceTrigger": {
+						"referenceName": "horlytumbling",
+						"type": "TriggerReference"
+					}
+				},
+				{
+					"type": "SelfDependencyTumblingWindowTriggerReference",
+					"offset": "-0:01:00:00"
+				}
+			]
 		}
 	}
 }
