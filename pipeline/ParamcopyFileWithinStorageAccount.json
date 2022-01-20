@@ -47,6 +47,11 @@
 				]
 			}
 		],
+		"parameters": {
+			"dbname": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }

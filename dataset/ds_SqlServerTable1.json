@@ -1,0 +1,32 @@
+{
+	"name": "ds_SqlServerTable1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlServer1",
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"dbname": {
+					"value": "@dataset().dnnamedataset().tablename",
+					"type": "Expression"
+				}
+			}
+		},
+		"parameters": {
+			"tablename": {
+				"type": "String"
+			},
+			"dnname": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [],
+		"typeProperties": {
+			"table": {
+				"value": "@dataset().tablename",
+				"type": "Expression"
+			}
+		}
+	}
+}
