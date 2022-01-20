@@ -10,7 +10,6 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "people.txt",
 				"folderPath": "output",
 				"container": "ctwafastudies"
 			}
