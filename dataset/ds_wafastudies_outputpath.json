@@ -1,5 +1,5 @@
 {
-	"name": "ds_wafastudies_cwafastudies_in_copy1",
+	"name": "ds_wafastudies_outputpath",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ls_stwafastudies",
