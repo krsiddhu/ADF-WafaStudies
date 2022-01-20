@@ -45,22 +45,33 @@
 				"dependsOn": [],
 				"userProperties": [],
 				"typeProperties": {
-					"variableName": "filename",
+					"variableName": "filenames",
 					"value": {
 						"value": "@pipeline().parameters.filename",
 						"type": "Expression"
 					}
 				}
+			},
+			{
+				"name": "Append variable1",
+				"type": "AppendVariable",
+				"dependsOn": [],
+				"userProperties": []
 			}
 		],
 		"parameters": {
 			"filename": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "hfjhf"
 			}
 		},
 		"variables": {
-			"filename": {
-				"type": "String"
+			"filenames": {
+				"type": "Array",
+				"defaultValue": [
+					"file1",
+					"file2"
+				]
 			}
 		},
 		"annotations": []
