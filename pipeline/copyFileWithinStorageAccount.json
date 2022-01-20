@@ -13,7 +13,16 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": [],
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "ctwafastudies/input/1customer.txt"
+					},
+					{
+						"name": "Destination",
+						"value": "ctwafastudies/output/people.txt"
+					}
+				],
 				"typeProperties": {
 					"source": {
 						"type": "BinarySource",
