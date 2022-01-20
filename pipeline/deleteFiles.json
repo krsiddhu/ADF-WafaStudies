@@ -56,7 +56,14 @@
 				"name": "Append variable1",
 				"type": "AppendVariable",
 				"dependsOn": [],
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "filenames",
+					"value": {
+						"value": "@pipeline().parameters.filename",
+						"type": "Expression"
+					}
+				}
 			}
 		],
 		"parameters": {
