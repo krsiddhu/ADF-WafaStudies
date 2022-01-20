@@ -46,7 +46,10 @@
 				"userProperties": [],
 				"typeProperties": {
 					"variableName": "filename",
-					"value": ""
+					"value": {
+						"value": "@pipeline().parameters.filename",
+						"type": "Expression"
+					}
 				}
 			}
 		],
