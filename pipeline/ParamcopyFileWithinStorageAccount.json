@@ -33,6 +33,9 @@
 		"parameters": {
 			"dbname": {
 				"type": "string"
+			},
+			"tablename": {
+				"type": "string"
 			}
 		},
 		"annotations": []
