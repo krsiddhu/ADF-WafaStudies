@@ -13,7 +13,12 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": [],
+				"userProperties": [
+					{
+						"name": "info",
+						"value": "delete all files in output"
+					}
+				],
 				"typeProperties": {
 					"dataset": {
 						"referenceName": "ds_wafastudies_outputpath",
