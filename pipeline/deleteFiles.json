@@ -141,7 +141,13 @@
 							"outputs": [
 								{
 									"referenceName": "ds_wafastudies_outputpath",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"folder": {
+											"value": "@item()",
+											"type": "Expression"
+										}
+									}
 								}
 							]
 						}
