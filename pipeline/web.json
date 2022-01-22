@@ -1,6 +1,24 @@
 {
 	"name": "web",
 	"properties": {
+		"activities": [
+			{
+				"name": "WebHook1",
+				"type": "WebHook",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"url": "http://dummy.restapiexample.com/api/v1/employees",
+					"method": "POST",
+					"body": {
+						"name": "test",
+						"salary": "123",
+						"age": "23"
+					},
+					"timeout": "00:10:00"
+				}
+			}
+		],
 		"annotations": []
 	}
 }
