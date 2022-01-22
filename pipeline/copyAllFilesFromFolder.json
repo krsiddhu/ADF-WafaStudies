@@ -43,8 +43,14 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "ds_wafastudies_cwafastudies_in",
-						"type": "DatasetReference"
+						"referenceName": "ds_wafastudies_inputfile",
+						"type": "DatasetReference",
+						"parameters": {
+							"inputfilename": {
+								"value": "@activity('Filter1').output",
+								"type": "Expression"
+							}
+						}
 					}
 				],
 				"outputs": [
