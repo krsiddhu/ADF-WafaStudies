@@ -10,7 +10,6 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "1customer.txt",
 				"folderPath": "input",
 				"container": "ctwafastudies"
 			}
