@@ -69,7 +69,7 @@
 						"type": "Expression"
 					},
 					"condition": {
-						"value": "@contains(item().name, 'Para')",
+						"value": "@not(contains(item().name, 'Para'))",
 						"type": "Expression"
 					}
 				}
