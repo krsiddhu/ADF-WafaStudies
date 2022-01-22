@@ -26,7 +26,8 @@
 						"type": "BinarySource",
 						"storeSettings": {
 							"type": "AzureBlobStorageReadSettings",
-							"recursive": true
+							"recursive": true,
+							"deleteFilesAfterCompletion": false
 						},
 						"formatSettings": {
 							"type": "BinaryReadSettings"
@@ -42,7 +43,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "ds_wafastudies_inputfolder",
+						"referenceName": "ds_wafastudies_inputfile",
 						"type": "DatasetReference"
 					}
 				],
@@ -80,7 +81,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "ds_wafastudies_inputfolder",
+						"referenceName": "ds_wafastudies_inputfile",
 						"type": "DatasetReference"
 					},
 					"fieldList": [
@@ -122,7 +123,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('Get Metadata1').output",
+						"value": "@activity('Get Metadata1').output.childItems",
 						"type": "Expression"
 					},
 					"condition": {
