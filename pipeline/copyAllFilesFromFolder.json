@@ -142,6 +142,9 @@
 		"variables": {
 			"outputfolder": {
 				"type": "String"
+			},
+			"filename": {
+				"type": "String"
 			}
 		},
 		"annotations": []
