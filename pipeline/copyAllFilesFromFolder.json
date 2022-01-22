@@ -7,7 +7,7 @@
 				"type": "Copy",
 				"dependsOn": [
 					{
-						"activity": "Get Metadata1",
+						"activity": "Filter1",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -104,6 +104,29 @@
 					"variableName": "outputfolder",
 					"value": {
 						"value": "@pipeline().parameters.OutputFolder",
+						"type": "Expression"
+					}
+				}
+			},
+			{
+				"name": "Filter1",
+				"type": "Filter",
+				"dependsOn": [
+					{
+						"activity": "Get Metadata1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@activity('Get Metadata1').output",
+						"type": "Expression"
+					},
+					"condition": {
+						"value": "@not(contains(item(), 'param'))",
 						"type": "Expression"
 					}
 				}
