@@ -42,7 +42,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "ds_wafastudies_cwafastudies_in",
+						"referenceName": "ds_wafastudies_inputfolder",
 						"type": "DatasetReference"
 					}
 				],
@@ -99,12 +99,20 @@
 				"name": "Set variable1",
 				"type": "SetVariable",
 				"dependsOn": [],
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "outputfolder",
+					"value": {
+						"value": "@pipeline().parameters.OutputFolder",
+						"type": "Expression"
+					}
+				}
 			}
 		],
 		"parameters": {
 			"OutputFolder": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "output"
 			}
 		},
 		"variables": {
