@@ -43,7 +43,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "ds_wafastudies_inputfile",
+						"referenceName": "ds_wafastudies_cwafastudies_in",
 						"type": "DatasetReference"
 					}
 				],

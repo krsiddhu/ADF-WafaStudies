@@ -5,11 +5,20 @@
 			"referenceName": "ls_stwafastudies",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"inputfilename": {
+				"type": "String"
+			}
+		},
 		"annotations": [],
 		"type": "Binary",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().inputfilename",
+					"type": "Expression"
+				},
 				"folderPath": "input",
 				"container": "ctwafastudies"
 			}
