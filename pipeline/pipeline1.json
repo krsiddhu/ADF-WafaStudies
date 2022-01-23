@@ -57,9 +57,20 @@
 			{
 				"name": "ForEach1",
 				"type": "ForEach",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Filter1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"userProperties": [],
 				"typeProperties": {
+					"items": {
+						"value": "@activity('Filter1').output",
+						"type": "Expression"
+					},
 					"activities": [
 						{
 							"name": "Delete1",
@@ -76,7 +87,13 @@
 							"typeProperties": {
 								"dataset": {
 									"referenceName": "ds_stwafastudiesgen2_copy1",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"subfolder": {
+											"value": "@concat('a/',item().name)",
+											"type": "Expression"
+										}
+									}
 								},
 								"logStorageSettings": {
 									"linkedServiceName": {
