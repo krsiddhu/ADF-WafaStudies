@@ -19,6 +19,12 @@
 						"referenceName": "ds_stwafastudiesgen2",
 						"type": "DatasetReference"
 					},
+					"logStorageSettings": {
+						"linkedServiceName": {
+							"referenceName": "ls_dswafastudiesgen2",
+							"type": "LinkedServiceReference"
+						}
+					},
 					"enableLogging": true,
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
