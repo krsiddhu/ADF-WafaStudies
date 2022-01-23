@@ -45,11 +45,11 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('Get Metadata1').output.itemType",
+						"value": "@activity('Get Metadata1').output.childItem",
 						"type": "Expression"
 					},
 					"condition": {
-						"value": "@equals(item(),'Folder')",
+						"value": "@equals(item().type,'Folder')",
 						"type": "Expression"
 					}
 				}
