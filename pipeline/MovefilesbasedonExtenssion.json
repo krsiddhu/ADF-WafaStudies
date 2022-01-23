@@ -64,7 +64,7 @@
 							"userProperties": [],
 							"typeProperties": {
 								"expression": {
-									"value": "@contains(item().name,'.csv' )   ",
+									"value": "@contains(variables('filename'),'.csv' )",
 									"type": "Expression"
 								},
 								"ifTrueActivities": [
@@ -90,10 +90,20 @@
 														"value": "@pipeline().parameters.folderpath",
 														"type": "Expression"
 													},
+													"wildcardFileName": {
+														"value": "@variables('filename')",
+														"type": "Expression"
+													},
 													"deleteFilesAfterCompletion": false
 												},
 												"formatSettings": {
 													"type": "BinaryReadSettings"
+												}
+											},
+											"sink": {
+												"type": "BinarySink",
+												"storeSettings": {
+													"type": "AzureBlobFSWriteSettings"
 												}
 											},
 											"enableStaging": false
@@ -103,9 +113,28 @@
 												"referenceName": "ds_stwafastudiesgen2",
 												"type": "DatasetReference"
 											}
+										],
+										"outputs": [
+											{
+												"referenceName": "ds_stwafastudiesgen2",
+												"type": "DatasetReference"
+											}
 										]
 									}
 								]
+							}
+						},
+						{
+							"name": "Set variable1",
+							"type": "SetVariable",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "filename",
+								"value": {
+									"value": "@item().name",
+									"type": "Expression"
+								}
 							}
 						}
 					]
