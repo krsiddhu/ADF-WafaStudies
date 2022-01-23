@@ -27,7 +27,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"folderpath": {
-											"value": "@concat(pipeline().parameters.folderpath,'/',pipeline().parameters.dynamicpath)",
+											"value": "@concat(pipeline().parameters.folderpath,'/',item().Folder)",
 											"type": "Expression"
 										}
 									}
