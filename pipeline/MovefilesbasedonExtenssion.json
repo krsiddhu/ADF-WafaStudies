@@ -86,10 +86,6 @@
 												"storeSettings": {
 													"type": "AzureBlobFSReadSettings",
 													"recursive": true,
-													"wildcardFolderPath": {
-														"value": "@pipeline().parameters.folderpath",
-														"type": "Expression"
-													},
 													"wildcardFileName": {
 														"value": "@variables('filename')",
 														"type": "Expression"
@@ -110,14 +106,26 @@
 										},
 										"inputs": [
 											{
-												"referenceName": "ds_stwafastudiesgen2",
-												"type": "DatasetReference"
+												"referenceName": "ds_stwafastudiesgen2_copy1",
+												"type": "DatasetReference",
+												"parameters": {
+													"folderpath": {
+														"value": "@pipeline().parameters.folderpath",
+														"type": "Expression"
+													}
+												}
 											}
 										],
 										"outputs": [
 											{
-												"referenceName": "ds_stwafastudiesgen2",
-												"type": "DatasetReference"
+												"referenceName": "ds_stwafastudiesgen2_copy1",
+												"type": "DatasetReference",
+												"parameters": {
+													"folderpath": {
+														"value": "@pipeline().parameters.csvpath",
+														"type": "Expression"
+													}
+												}
 											}
 										]
 									}
