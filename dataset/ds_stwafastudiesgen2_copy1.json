@@ -1,16 +1,24 @@
 {
-	"name": "ds_stwafastudiesgen2",
+	"name": "ds_stwafastudiesgen2_copy1",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ls_dswafastudiesgen2",
 			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"subfolder": {
+				"type": "string"
+			}
 		},
 		"annotations": [],
 		"type": "Binary",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "a/",
+				"folderPath": {
+					"value": "@concat('a/',dataset().subfolder)",
+					"type": "Expression"
+				},
 				"fileSystem": "input"
 			}
 		}
