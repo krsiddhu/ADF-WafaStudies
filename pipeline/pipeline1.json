@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "ds_stwafastudiesgen2",
+						"referenceName": "ds_stwafastudiesgen2_copy1",
 						"type": "DatasetReference"
 					},
 					"fieldList": [
@@ -89,7 +89,7 @@
 									"referenceName": "ds_stwafastudiesgen2_copy1",
 									"type": "DatasetReference",
 									"parameters": {
-										"subfolder": {
+										"folderpath": {
 											"value": "@concat('a/',item().name)",
 											"type": "Expression"
 										}
