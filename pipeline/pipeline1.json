@@ -17,7 +17,13 @@
 				"typeProperties": {
 					"dataset": {
 						"referenceName": "ds_stwafastudiesgen2_copy1",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"folderpath": {
+								"value": "@pipeline().parameters.folderpath",
+								"type": "Expression"
+							}
+						}
 					},
 					"fieldList": [
 						"childItems"
