@@ -96,7 +96,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"folderpath": {
-											"value": "@concat('a/',item().name)",
+											"value": "@concat(pipeline().parameters.folderpath,'/',item().name)",
 											"type": "Expression"
 										}
 									}
