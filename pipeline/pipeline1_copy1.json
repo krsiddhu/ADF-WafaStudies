@@ -12,6 +12,7 @@
 						"value": "@variables('json')",
 						"type": "Expression"
 					},
+					"isSequential": false,
 					"activities": [
 						{
 							"name": "Execute Pipeline1",
@@ -54,6 +55,14 @@
 						"name": [
 							{
 								"Folder": "output1"
+							}
+						],
+						"type": "Folder"
+					},
+					{
+						"name": [
+							{
+								"Folder": "out2"
 							}
 						],
 						"type": "Folder"
