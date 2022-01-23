@@ -71,7 +71,7 @@
 							"userProperties": [],
 							"typeProperties": {
 								"expression": {
-									"value": "@contains(variables('filename'),'.csv' )",
+									"value": "@endswith(variables('filename'),'.csv' )",
 									"type": "Expression"
 								},
 								"ifFalseActivities": [
