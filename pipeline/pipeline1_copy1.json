@@ -19,6 +19,10 @@
 							"dependsOn": [],
 							"userProperties": [],
 							"typeProperties": {
+								"items": {
+									"value": "@item().name",
+									"type": "Expression"
+								},
 								"activities": [
 									{
 										"name": "Delete1",
@@ -38,7 +42,7 @@
 												"type": "DatasetReference",
 												"parameters": {
 													"folderpath": {
-														"value": "@concat(pipeline().parameters.folderpath,'/',item().name)",
+														"value": "@concat(pipeline().parameters.folderpath,'/',item().Folder)",
 														"type": "Expression"
 													}
 												}
