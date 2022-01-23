@@ -5,12 +5,16 @@
 			"referenceName": "ls_dswafastudiesgen2",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"filepath": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "Binary",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "a",
 				"fileSystem": "input"
 			}
 		}
