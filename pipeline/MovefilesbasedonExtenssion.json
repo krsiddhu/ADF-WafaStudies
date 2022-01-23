@@ -60,13 +60,83 @@
 							"name": "If Condition1",
 							"description": "",
 							"type": "IfCondition",
-							"dependsOn": [],
+							"dependsOn": [
+								{
+									"activity": "Set variable1",
+									"dependencyConditions": [
+										"Succeeded"
+									]
+								}
+							],
 							"userProperties": [],
 							"typeProperties": {
 								"expression": {
 									"value": "@contains(variables('filename'),'.csv' )",
 									"type": "Expression"
 								},
+								"ifFalseActivities": [
+									{
+										"name": "Copy data1_copy1",
+										"type": "Copy",
+										"dependsOn": [],
+										"policy": {
+											"timeout": "7.00:00:00",
+											"retry": 0,
+											"retryIntervalInSeconds": 30,
+											"secureOutput": false,
+											"secureInput": false
+										},
+										"userProperties": [],
+										"typeProperties": {
+											"source": {
+												"type": "BinarySource",
+												"storeSettings": {
+													"type": "AzureBlobFSReadSettings",
+													"recursive": true,
+													"wildcardFileName": {
+														"value": "@variables('filename')",
+														"type": "Expression"
+													},
+													"deleteFilesAfterCompletion": false
+												},
+												"formatSettings": {
+													"type": "BinaryReadSettings"
+												}
+											},
+											"sink": {
+												"type": "BinarySink",
+												"storeSettings": {
+													"type": "AzureBlobFSWriteSettings"
+												}
+											},
+											"enableStaging": false
+										},
+										"inputs": [
+											{
+												"referenceName": "ds_stwafastudiesgen2_copy1",
+												"type": "DatasetReference",
+												"parameters": {
+													"folderpath": {
+														"value": "@pipeline().parameters.folderpath",
+														"type": "Expression"
+													}
+												}
+											}
+										],
+										"outputs": [
+											{
+												"referenceName": "ds_stwafastudiesgen2_copy1",
+												"type": "DatasetReference",
+												"parameters": {
+													"folderpath": {
+														"value": "@pipeline().parameters.txtpath",
+														"type": "Expression"
+													}
+												}
+											}
+										]
+									}
+								],
 								"ifTrueActivities": [
 									{
 										"name": "Copy data1",
