@@ -8,6 +8,10 @@
 				"dependsOn": [],
 				"userProperties": [],
 				"typeProperties": {
+					"items": {
+						"value": "@pipeline().parameters.dynamicpath",
+						"type": "Expression"
+					},
 					"activities": [
 						{
 							"name": "Delete1",
