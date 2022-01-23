@@ -27,7 +27,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"folderpath": {
-											"value": "@concat(pipeline().parameters.folderpath,'/',)",
+											"value": "@concat(pipeline().parameters.folderpath,'/',pipeline().parameters.dynamicpath)",
 											"type": "Expression"
 										}
 									}
@@ -58,21 +58,6 @@
 			},
 			"dynamicpath": {
 				"type": "string"
-			}
-		},
-		"variables": {
-			"json": {
-				"type": "Array",
-				"defaultValue": [
-					{
-						"name": [
-							{
-								"Folder": "output1"
-							}
-						],
-						"type": "Folder"
-					}
-				]
 			}
 		},
 		"annotations": []
