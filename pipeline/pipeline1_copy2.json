@@ -1,0 +1,80 @@
+{
+	"name": "pipeline1_copy2",
+	"properties": {
+		"activities": [
+			{
+				"name": "ForEach2",
+				"type": "ForEach",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"activities": [
+						{
+							"name": "Delete1",
+							"type": "Delete",
+							"dependsOn": [],
+							"policy": {
+								"timeout": "7.00:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"dataset": {
+									"referenceName": "ds_stwafastudiesgen2_copy1",
+									"type": "DatasetReference",
+									"parameters": {
+										"folderpath": {
+											"value": "@concat(pipeline().parameters.folderpath,'/',)",
+											"type": "Expression"
+										}
+									}
+								},
+								"logStorageSettings": {
+									"linkedServiceName": {
+										"referenceName": "ls_dswafastudiesgen2",
+										"type": "LinkedServiceReference"
+									},
+									"path": ""
+								},
+								"enableLogging": true,
+								"storeSettings": {
+									"type": "AzureBlobFSReadSettings",
+									"recursive": true,
+									"enablePartitionDiscovery": false
+								}
+							}
+						}
+					]
+				}
+			}
+		],
+		"parameters": {
+			"folderpath": {
+				"type": "string",
+				"defaultValue": "a"
+			},
+			"dynamicpath": {
+				"type": "string"
+			}
+		},
+		"variables": {
+			"json": {
+				"type": "Array",
+				"defaultValue": [
+					{
+						"name": [
+							{
+								"Folder": "output1"
+							}
+						],
+						"type": "Folder"
+					}
+				]
+			}
+		},
+		"annotations": []
+	}
+}
