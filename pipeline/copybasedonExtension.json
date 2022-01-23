@@ -38,7 +38,10 @@
 				"inputs": [
 					{
 						"referenceName": "ds_stwafastudiesgen2_copy1",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"folderpath": "a"
+						}
 					}
 				],
 				"outputs": [
