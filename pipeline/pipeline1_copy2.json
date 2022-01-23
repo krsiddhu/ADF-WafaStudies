@@ -57,7 +57,7 @@
 				"defaultValue": "a"
 			},
 			"dynamicpath": {
-				"type": "string"
+				"type": "array"
 			}
 		},
 		"annotations": []
