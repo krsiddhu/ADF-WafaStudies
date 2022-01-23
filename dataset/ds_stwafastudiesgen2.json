@@ -1,0 +1,17 @@
+{
+	"name": "ds_stwafastudiesgen2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_dswafastudiesgen2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "input"
+			}
+		}
+	}
+}
