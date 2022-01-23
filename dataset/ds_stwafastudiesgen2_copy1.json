@@ -16,7 +16,7 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"folderPath": {
-					"value": "@concat('a/',dataset().subfolder)",
+					"value": "@dataset().subfolder",
 					"type": "Expression"
 				},
 				"fileSystem": "input"

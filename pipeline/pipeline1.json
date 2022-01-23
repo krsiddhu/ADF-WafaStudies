@@ -75,7 +75,7 @@
 							"userProperties": [],
 							"typeProperties": {
 								"dataset": {
-									"referenceName": "ds_stwafastudiesgen2",
+									"referenceName": "ds_stwafastudiesgen2_copy1",
 									"type": "DatasetReference"
 								},
 								"logStorageSettings": {
