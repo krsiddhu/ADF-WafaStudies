@@ -3,8 +3,8 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Lookup1",
-				"type": "Lookup",
+				"name": "Stored procedure1",
+				"type": "SqlServerStoredProcedure",
 				"dependsOn": [],
 				"policy": {
 					"timeout": "7.00:00:00",
@@ -15,22 +15,20 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"source": {
-						"type": "DelimitedTextSource",
-						"storeSettings": {
-							"type": "AzureBlobFSReadSettings",
-							"recursive": true,
-							"enablePartitionDiscovery": false
-						},
-						"formatSettings": {
-							"type": "DelimitedTextReadSettings"
+					"storedProcedureName": "[dbo].[wafatest]",
+					"storedProcedureParameters": {
+						"pipename": {
+							"value": {
+								"value": "@pipeline().Pipeline",
+								"type": "Expression"
+							},
+							"type": "String"
 						}
-					},
-					"dataset": {
-						"referenceName": "DelimitedText1",
-						"type": "DatasetReference"
-					},
-					"firstRowOnly": false
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "ls_sqlwafastudies_sqldbwafastudies",
+					"type": "LinkedServiceReference"
 				}
 			}
 		],
