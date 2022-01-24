@@ -21,23 +21,7 @@
 						"partitionOption": "None"
 					},
 					"enableStaging": false
-				},
-				"inputs": [
-					{
-						"referenceName": "ds_SqlServerTable1",
-						"type": "DatasetReference",
-						"parameters": {
-							"tablename": {
-								"value": "@pipeline().parameters.tablename",
-								"type": "Expression"
-							},
-							"dnname": {
-								"value": "@pipeline().parameters.dbname",
-								"type": "Expression"
-							}
-						}
-					}
-				]
+				}
 			},
 			{
 				"name": "Stored procedure1",
