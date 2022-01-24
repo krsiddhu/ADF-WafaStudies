@@ -20,11 +20,15 @@
 		},
 		"schema": [
 			{
-				"name": "depid",
+				"name": "id",
 				"type": "String"
 			},
 			{
 				"name": "name",
+				"type": "String"
+			},
+			{
+				"name": "depid",
 				"type": "String"
 			}
 		]
