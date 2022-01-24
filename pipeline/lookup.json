@@ -3,21 +3,28 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Validation1",
-				"type": "Validation",
+				"name": "Lookup1",
+				"type": "Lookup",
 				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
 				"userProperties": [],
 				"typeProperties": {
-					"dataset": {
-						"referenceName": "ds_stwafastudiesgen2",
-						"type": "DatasetReference",
-						"parameters": {
-							"filepath": "input"
-						}
+					"source": {
+						"type": "AzureSqlSource",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
 					},
-					"timeout": "7.00:00:00",
-					"sleep": 10,
-					"childItems": false
+					"dataset": {
+						"referenceName": "ds_sqlwafastudies_sqldbwafastudies_emp",
+						"type": "DatasetReference"
+					},
+					"firstRowOnly": false
 				}
 			}
 		],

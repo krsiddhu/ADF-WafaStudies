@@ -14,8 +14,7 @@
 		"type": "Binary",
 		"typeProperties": {
 			"location": {
-				"type": "AzureBlobFSLocation",
-				"fileSystem": "input"
+				"type": "AzureBlobFSLocation"
 			}
 		}
 	}
