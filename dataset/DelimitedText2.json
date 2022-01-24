@@ -15,13 +15,16 @@
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
+			"firstRowAsHeader": true,
 			"quoteChar": "\""
 		},
 		"schema": [
 			{
+				"name": "depid",
 				"type": "String"
 			},
 			{
+				"name": "name",
 				"type": "String"
 			}
 		]
