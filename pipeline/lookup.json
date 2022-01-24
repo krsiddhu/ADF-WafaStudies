@@ -8,8 +8,16 @@
 				"dependsOn": [],
 				"userProperties": [],
 				"typeProperties": {
+					"dataset": {
+						"referenceName": "ds_stwafastudiesgen2",
+						"type": "DatasetReference",
+						"parameters": {
+							"filepath": "input"
+						}
+					},
 					"timeout": "7.00:00:00",
-					"sleep": 10
+					"sleep": 10,
+					"childItems": true
 				}
 			}
 		],
