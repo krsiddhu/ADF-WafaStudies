@@ -18,7 +18,7 @@
 					"name": "Unpivot1"
 				}
 			],
-			"script": "source(output(\n\t\tId as string,\n\t\tMale as string,\n\t\tFemale as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> population\npopulation unpivot(output(\n\t\tGender as string,\n\t\tCount as integer\n\t),\n\tungroupBy(Id),\n\tlateral: true,\n\tignoreNullPivots: false) ~> Unpivot1"
+			"script": "source(output(\n\t\tId as string,\n\t\tMale as integer,\n\t\tFemale as integer\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> population\npopulation unpivot(output(\n\t\tGender as string,\n\t\tCount as integer\n\t),\n\tungroupBy(Id),\n\tlateral: true,\n\tignoreNullPivots: false) ~> Unpivot1"
 		}
 	}
 }
